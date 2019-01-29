@@ -28,7 +28,7 @@
     [self.window makeKeyAndVisible];
     
     //判断是否第一次加载
-    //测试时可设为YES
+    //测试时可设为YES 一直显示
     if (![[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
     

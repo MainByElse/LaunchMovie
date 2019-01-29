@@ -57,6 +57,12 @@
     self.avPlayer.player = player;
     [self.view.layer addSublayer:self.avPlayer];
     
+    //19-01-29 解决真机测试时没有声音的问题
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord
+             withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
+                   error:nil];
+    
     //开始播放
     [self.avPlayer.player play];
     
